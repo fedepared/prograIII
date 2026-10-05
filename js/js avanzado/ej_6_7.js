@@ -1,0 +1,81 @@
+// Crear un archivo biblioteca.js.
+// Declarar un array books con al menos cinco libros, cada uno con title, author, year, pages y available (booleano). Que al menos uno tenga available: false.
+// Con destructuring de array, extraer el primer y el último libro del catálogo en dos variables, sin usar índices (books[0], books[books.length - 1]).
+
+const books = [
+  {
+    "title": "deserunt est adipisicing",
+    "author": "Nunez Hardy",
+    "year": 2021,
+    "pages": 626,
+    "available": false
+  },
+  {
+    "title": "do in sint",
+    "author": "Harrison Carney",
+    "year": 2008,
+    "pages": 706,
+    "available": false
+  },
+  {
+    "title": "ex excepteur aute",
+    "author": "Nadine Nunez",
+    "year": 2013,
+    "pages": 822,
+    "available": false
+  },
+  {
+    "title": "ut amet sint",
+    "author": "Franco Cross",
+    "year": 1970,
+    "pages": 492,
+    "available": true
+  },
+  {
+    "title": "voluptate aliquip nisi",
+    "author": "Eva Sawyer",
+    "year": 1963,
+    "pages": 223,
+    "available": true
+  },
+  {
+    "title": "ad aliqua dolore",
+    "author": "Joanna Adams",
+    "year": 1971,
+    "pages": 433,
+    "available": false
+  },
+  {
+    "title": "commodo adipisicing mollit",
+    "author": "Coleman Shannon",
+    "year": 1980,
+    "pages": 875,
+    "available": false
+  }
+]
+
+const [primero,,,,,,septimo] = books;
+
+
+books.push( {
+    "title": "duis ut anim",
+    "author": "Rosa Holt",
+    "year": 1981,
+    "pages": 924,
+    "available": true
+  });
+console.log("con push",books);
+console.log(books.length);
+
+  books.unshift({
+    "title": "llamando a un ruiseñor",
+    "author": "Fede Pared",
+    "year": 1946,
+    "pages": 1924,
+    "available": true
+  });
+
+books.splice(2,1);
+
+console.log("con unshift: ", books);
+console.log(books.length);
